@@ -4,8 +4,8 @@ const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
 
 // Constants
-// const PORT = 8080;
-// const HOST = '0.0.0.0';
+const PORT = 8080;
+const HOST = '0.0.0.0';
 
 // console.log(process.env.DATABASE_URL);
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.send('Хомяк 😋👩‍👩‍👧👩‍👩‍👧‍👦 пыщка assad2d3\n');
 });
 
-// app.listen(PORT, HOST);
+app.listen(PORT, HOST);
 
 // console.log(`Running on http://${HOST}:${PORT}`);
 
