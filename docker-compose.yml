@@ -2,12 +2,12 @@ version: '2'
 services:
 
   web:
-    build: .
-    command: nodemon server.js
+    build: ./app
+    command: nodemon ./server.js
     ports:
       - 8080:8080
     volumes:
-      - .:/data
+      - ./app:/data
     depends_on:
       - db
     environment:
