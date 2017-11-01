@@ -8,6 +8,7 @@ services:
       - 8080:8080
     volumes:
       - ./app:/data
+      - /data/node_modules
     depends_on:
       - db
     environment:
