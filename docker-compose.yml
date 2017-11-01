@@ -1,0 +1,17 @@
+version: '2'
+services:
+
+  web:
+    build: .
+    command: nodemon server.js
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/data
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: mongodb://mongodb@db/exchange-rate
+
+  db:
+    image: mongo:latest
